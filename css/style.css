@@ -144,10 +144,23 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: -1; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 .story {
   width: 75%;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 0 auto;
   padding: 6rem;
   padding-left: 9rem;
@@ -159,9 +172,31 @@ body {
     height: 15rem;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg); }
-    .story__shape img {
-      height: 100%; }
+    transform: translateX(-3rem) skewX(12deg);
+    transition: all 0.5s;
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transition: all 0.5s;
+    transform: translateX(-4rem) scale(1.4); }
+  .story__caption {
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    backface-visibility: hidden;
+    text-align: center;
+    font-size: 1.7rem;
+    transition: all 0.5s;
+    opacity: 0; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__img {
+    filter: blur(0.3rem) brightness(80%);
+    transform: translateX(-4rem) scale(1); }
   .story__text {
     transform: skewX(12deg); }
 
@@ -287,6 +322,7 @@ body {
     text-align: right; }
   .card__heading-span {
     padding: 1rem 1.5rem;
+    line-height: 5.3rem;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; }
     .card__heading-span--1 {
@@ -437,4 +473,4 @@ body {
 
 .section-stories {
   padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative; }
