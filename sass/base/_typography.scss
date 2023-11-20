@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   // font-family: "Rubik", sans-serif;
   font-size: $default-font-size;
   line-height: 1.7;
@@ -60,16 +60,16 @@ body {
   }
 }
 
-.heading-tertiary{
+.heading-tertiary {
   font-size: $default-font-size;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.paragraph{
+.paragraph {
   font-size: $default-font-size;
 
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 3rem;
   }
 }
